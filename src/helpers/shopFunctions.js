@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { removeCartID, saveCartID } from './cartFunctions';
 import { fetchProduct } from './fetchFunctions';
 
