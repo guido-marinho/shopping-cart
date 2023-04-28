@@ -3,15 +3,13 @@ import './style.css';
 
 // importa funções auxiliares
 import { searchCep } from './helpers/cepFunctions';
-import {
-  createProductElement,
-  createCartProductElement,
-} from './helpers/shopFunctions';
+import { createProductElement, createCartProductElement } from './helpers/shopFunctions';
 import { fetchProduct, fetchProductsList } from './helpers/fetchFunctions';
 import { getSavedCartIDs } from './helpers/cartFunctions';
 
 // captura de elementos html para manipulação via js
 const productsContainer = document.querySelector('.products');
+const searchProducts = document.querySelector('.search-products');
 
 // criação de elementos html para exibição de mensagens de carregamento e erro
 const displayLoading = () => {
@@ -22,9 +20,9 @@ const displayLoading = () => {
 };
 
 // listagem de produtos na tela conforme requisição feita a api, filtrando apenas as informações desejadas, para isso usamos as funções auxiliares fetchProductsList e creatProductElement
-const displayProductList = async () => {
+const displayProductList = async (value = 'computador') => {
   try {
-    const productList = await fetchProductsList('computer');
+    const productList = await fetchProductsList(value);
     productsContainer.innerHTML = '';
 
     productList.forEach((product) => {
@@ -70,6 +68,16 @@ const sumCartTotalPrice = () => {
 
 // addEventListeners
 document.querySelector('.cep-button').addEventListener('click', searchCep);
+
+searchProducts.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const searchValue = document.getElementById('search-input').value;
+  if (searchValue) {
+    displayProductList(searchValue);
+  } else {
+    displayProductList();
+  }
+});
 
 // chamada de funções
 window.onload = () => {

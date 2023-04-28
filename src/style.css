@@ -61,6 +61,53 @@
   color: white;
 }
 
+.search-products {
+  position: relative;
+  margin-right: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  background-color: rgb(0, 213, 226);
+}
+
+.search-products input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(65, 25, 127);
+}
+
+.search-products input:focus {
+  outline: none;
+}
+
+.search-products button {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  border: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  cursor: pointer;
+}
+
+.search-products button:hover {
+  background-color: rgb(25, 244, 255);
+}
+
+.search-products button img {
+  width: 100%;
+  height: 100%;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
