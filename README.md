@@ -34,4 +34,3 @@ Este projeto é uma demonstração simples de como implementar um carrinho de co
 
 ## Desmontração de Uso
 
-![Project Gif](./prototipo.gif)
