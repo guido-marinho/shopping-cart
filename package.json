@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "vite --open"
+    "dev": "vite --open",
+    "build": "vite build"
   },
   "author": "Guilherme Gatti Marinho",
   "license": "ISC",
