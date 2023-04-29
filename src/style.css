@@ -7,9 +7,10 @@
 
 .header {
   position: relative;
-  background-color: rgb(29, 28, 31);
+  background-color: rgb(0, 0, 0);
   box-sizing: border-box;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 90px;
@@ -19,22 +20,24 @@
   width: 75%;
 }
 
-.logo {
-  width: 250px;
-  margin-left: 30px;
-}
-
 .title {
   color: rgb(221, 221, 221);
   font-size: 30px;
   padding-left: 30px;
 }
 
+.logo {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-cartTitle {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 0 100px;
   width: 50%;
   max-width: 25%;
@@ -46,7 +49,7 @@
 }
 
 .container-cartTitle .cart__title {
-  color: rgba(229, 223, 238, 0.734);
+  color: rgb(85, 85, 86);
   font-size: 20px;
   font-weight: 700;
 }
@@ -366,46 +369,42 @@
     100% { background-position: 0 0; }
 }
 
-.search-products {
-  width: 100%;
-  height: 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
+form {
+  width:100%;
+  margin:0 auto;
+  padding:20px 0;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  
+  position: relative; 
+  right: 10%;
 }
 
-.search-products input {
-  width: 90%;
-  height: 90%;
-  border: none;
-  outline: none;
+form input {
+  width:100%;
+  height:40px;
+  margin: auto;
+  padding:5px;
+  box-sizing:border-box;
+  border:1px solid #000;
+  background-color: #1d1c1c;
   color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
 }
 
-.search-products button {
-  width: 10%;
-  height: 100%;
-  border: none;
-  outline: none;
+form button {
+  width:40;
+  height:40px;
+  margin: auto;
+  padding:5px;
+  box-sizing:border-box;
+  border:1px solid #000;
+  margin-left: 3px;
+  background-color: #000;
+}
+
+form button:hover {
+  background-color: #1d1c1c;
   color: #fff;
-  background: #111;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
 }
