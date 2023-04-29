@@ -6,8 +6,11 @@ Este é um projeto simples de carrinho de compras desenvolvido por mim no módul
 Neste projeto, você pode visualizar uma página web com um catálogo de produtos e um carrinho de compras. O usuário pode adicionar e remover itens do carrinho.
 
 # Funcionalidades
+
 ~ Adicionar itens ao carrinho de compras
+
 ~ Remover itens do carrinho de compras
+
 ~Exibir o valor total da compra
 
 # Tecnologias utilizadas
