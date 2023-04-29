@@ -1,1 +1,1 @@
-# shopping-cart  <a href="https://shopping-cart-by-guilherme.surge.sh/">shopping-cart  </a>
+# <a href="https://shopping-cart-by-guilherme.surge.sh/"> Carrinho de compras</a>
