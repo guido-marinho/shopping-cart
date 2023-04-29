@@ -7,7 +7,7 @@
 
 .header {
   position: relative;
-  background-color: rgb(65, 25, 127);
+  background-color: rgb(29, 28, 31);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -36,8 +36,8 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 0 100px;
-  background-color: rgb(0, 213, 226);
-  width: 25%;
+  width: 50%;
+  max-width: 25%;
   height: 100%;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .container-cartTitle .cart__title {
-  color: rgb(65, 25, 127);
+  color: rgba(229, 223, 238, 0.734);
   font-size: 20px;
   font-weight: 700;
 }
@@ -59,53 +59,6 @@
 
 .title strong {
   color: white;
-}
-
-.search-products {
-  position: relative;
-  margin-right: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 50px;
-  background-color: rgb(0, 213, 226);
-}
-
-.search-products input {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 5px;
-  padding: 0 10px;
-  font-size: 15px;
-  font-weight: 700;
-  color: rgb(65, 25, 127);
-}
-
-.search-products input:focus {
-  outline: none;
-}
-
-.search-products button {
-  position: absolute;
-  right: 0;
-  width: 50px;
-  height: 100%;
-  border: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-
-  cursor: pointer;
-}
-
-.search-products button:hover {
-  background-color: rgb(25, 244, 255);
-}
-
-.search-products button img {
-  width: 100%;
-  height: 100%;
 }
 
 .products {
@@ -124,7 +77,7 @@
   width: 270px;
   padding: 13px;
   height: 340px;
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -196,29 +149,6 @@
   justify-content: center;
   width: 100%;
   margin: 15px 0;
-}
-
-.product .product__add {
-  background-color: rgb(0, 213, 226);
-  color: white;
-  border: 0;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 700;
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 5px;
-  transition: box-shadow 0.2s ease;
-}
-
-.product .product__add:hover {
-  background-color: rgb(25, 244, 255);
-  box-shadow: 0 0 0.2rem white,
-    0 0 0.2rem white,
-    0 0 1.2rem -5px rgb(0, 213, 226),
-    0 0 0.8rem -5px rgb(0, 213, 226),
-    0 0 1.6rem -5px rgb(0, 213, 226),
-    inset 0 0 1.3rem rgb(0, 138, 202);
 }
 
 .cart {
@@ -373,4 +303,109 @@
   .cart {
     height: 630px;
   }
+}
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.search-products {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.search-products input {
+  width: 90%;
+  height: 90%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.search-products button {
+  width: 10%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
 }

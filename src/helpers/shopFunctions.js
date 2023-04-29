@@ -138,7 +138,7 @@ export const createProductElement = ({ id, title, thumbnail, price }) => {
 
   const cartButton = createCustomElement(
     'button',
-    'product__add',
+    'glow-on-hover',
     'Adicionar ao carrinho!',
   );
   cartButton.addEventListener('click', () => {

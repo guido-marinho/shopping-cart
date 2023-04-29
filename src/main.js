@@ -20,7 +20,8 @@ const displayLoading = () => {
 };
 
 // listagem de produtos na tela conforme requisição feita a api, filtrando apenas as informações desejadas, para isso usamos as funções auxiliares fetchProductsList e creatProductElement
-const displayProductList = async (value = 'computador') => {
+// define um parametro padrão para a função, caso não seja passado nenhum valor, o valor padrão será 'computador'
+const displayProductList = async (value = 'pc gamer') => {
   try {
     const productList = await fetchProductsList(value);
     productsContainer.innerHTML = '';
