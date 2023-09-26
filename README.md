@@ -4,6 +4,8 @@
 Este é um projeto simples de carrinho de compras desenvolvido por mim no módulo de front-end na Trybe, utilizando HTML, CSS e JavaScript. O carrinho de compras é uma funcionalidade muito comum em lojas online, permitindo aos usuários adicionar produtos a um carrinho virtual e realizar uma compra com todos os itens selecionados de uma só vez.
 Além disso, mantém as informações do carrinho salvas no local storage.
 
+Você pode acessar o projeto nesse <a href="https://shopping-cart-by-guilherme.surge.sh/"> link </a>
+
 Neste projeto, você pode visualizar uma página web com um catálogo de produtos e um carrinho de compras. O usuário pode adicionar e remover itens do carrinho.
 
 # Funcionalidades
